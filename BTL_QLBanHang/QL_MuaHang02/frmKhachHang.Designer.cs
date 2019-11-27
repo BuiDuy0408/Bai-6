@@ -32,7 +32,6 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.txttenKH = new System.Windows.Forms.TextBox();
             this.txtMaKH = new System.Windows.Forms.TextBox();
             this.lblTenKH = new System.Windows.Forms.Label();
@@ -41,6 +40,22 @@
             this.lblGioiTinh = new System.Windows.Forms.Label();
             this.cmbLoaiKH = new System.Windows.Forms.ComboBox();
             this.lblLoaiKH = new System.Windows.Forms.Label();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.lblGhichu = new System.Windows.Forms.Label();
+            this.txtGhichu = new System.Windows.Forms.TextBox();
+            this.txtSoDT = new System.Windows.Forms.TextBox();
+            this.txtDC = new System.Windows.Forms.TextBox();
+            this.lblSoDT = new System.Windows.Forms.Label();
+            this.lblDiaCHi = new System.Windows.Forms.Label();
+            this.groupBoxThongKeKH = new System.Windows.Forms.GroupBox();
+            this.btnThongKe = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnKH = new System.Windows.Forms.Button();
+            this.groupBoxThongKeKH.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnThem
@@ -88,22 +103,6 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
             // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLuu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLuu.BackgroundImage")));
-            this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLuu.Enabled = false;
-            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLuu.Location = new System.Drawing.Point(12, 193);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(128, 38);
-            this.btnLuu.TabIndex = 9;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = false;
-            // 
             // txttenKH
             // 
             this.txttenKH.Enabled = false;
@@ -148,7 +147,7 @@
             "Nữ",
             "Gay",
             "Less"});
-            this.cmbGioiTinh.Location = new System.Drawing.Point(329, 83);
+            this.cmbGioiTinh.Location = new System.Drawing.Point(343, 83);
             this.cmbGioiTinh.Name = "cmbGioiTinh";
             this.cmbGioiTinh.Size = new System.Drawing.Size(121, 24);
             this.cmbGioiTinh.TabIndex = 25;
@@ -171,7 +170,7 @@
             "Khách VIP",
             "Khách Thường Xuyên",
             "Khách Lẻ"});
-            this.cmbLoaiKH.Location = new System.Drawing.Point(333, 118);
+            this.cmbLoaiKH.Location = new System.Drawing.Point(343, 117);
             this.cmbLoaiKH.Name = "cmbLoaiKH";
             this.cmbLoaiKH.Size = new System.Drawing.Size(163, 24);
             this.cmbLoaiKH.TabIndex = 23;
@@ -186,11 +185,187 @@
             this.lblLoaiKH.TabIndex = 22;
             this.lblLoaiKH.Text = "Loại Khách Hàng";
             // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLuu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLuu.BackgroundImage")));
+            this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLuu.Enabled = false;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLuu.Location = new System.Drawing.Point(12, 193);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(128, 38);
+            this.btnLuu.TabIndex = 9;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = false;
+            // 
+            // lblGhichu
+            // 
+            this.lblGhichu.AutoSize = true;
+            this.lblGhichu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGhichu.Location = new System.Drawing.Point(574, 101);
+            this.lblGhichu.Name = "lblGhichu";
+            this.lblGhichu.Size = new System.Drawing.Size(76, 23);
+            this.lblGhichu.TabIndex = 31;
+            this.lblGhichu.Text = "Ghi chú";
+            // 
+            // txtGhichu
+            // 
+            this.txtGhichu.Location = new System.Drawing.Point(725, 88);
+            this.txtGhichu.Multiline = true;
+            this.txtGhichu.Name = "txtGhichu";
+            this.txtGhichu.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.txtGhichu.Size = new System.Drawing.Size(163, 60);
+            this.txtGhichu.TabIndex = 30;
+            // 
+            // txtSoDT
+            // 
+            this.txtSoDT.Enabled = false;
+            this.txtSoDT.Location = new System.Drawing.Point(725, 21);
+            this.txtSoDT.Name = "txtSoDT";
+            this.txtSoDT.Size = new System.Drawing.Size(163, 22);
+            this.txtSoDT.TabIndex = 29;
+            // 
+            // txtDC
+            // 
+            this.txtDC.Enabled = false;
+            this.txtDC.Location = new System.Drawing.Point(725, 58);
+            this.txtDC.Multiline = true;
+            this.txtDC.Name = "txtDC";
+            this.txtDC.Size = new System.Drawing.Size(163, 25);
+            this.txtDC.TabIndex = 28;
+            // 
+            // lblSoDT
+            // 
+            this.lblSoDT.AutoSize = true;
+            this.lblSoDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoDT.Location = new System.Drawing.Point(574, 25);
+            this.lblSoDT.Name = "lblSoDT";
+            this.lblSoDT.Size = new System.Drawing.Size(128, 23);
+            this.lblSoDT.TabIndex = 27;
+            this.lblSoDT.Text = "Số Điện Thoại";
+            // 
+            // lblDiaCHi
+            // 
+            this.lblDiaCHi.AutoSize = true;
+            this.lblDiaCHi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiaCHi.Location = new System.Drawing.Point(574, 60);
+            this.lblDiaCHi.Name = "lblDiaCHi";
+            this.lblDiaCHi.Size = new System.Drawing.Size(73, 23);
+            this.lblDiaCHi.TabIndex = 26;
+            this.lblDiaCHi.Text = "Địa Chỉ";
+            // 
+            // groupBoxThongKeKH
+            // 
+            this.groupBoxThongKeKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.groupBoxThongKeKH.Controls.Add(this.btnThongKe);
+            this.groupBoxThongKeKH.Controls.Add(this.dateTimePicker2);
+            this.groupBoxThongKeKH.Controls.Add(this.label2);
+            this.groupBoxThongKeKH.Controls.Add(this.dateTimePicker1);
+            this.groupBoxThongKeKH.Controls.Add(this.label1);
+            this.groupBoxThongKeKH.Controls.Add(this.btnRefresh);
+            this.groupBoxThongKeKH.Controls.Add(this.btnKH);
+            this.groupBoxThongKeKH.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBoxThongKeKH.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxThongKeKH.Name = "groupBoxThongKeKH";
+            this.groupBoxThongKeKH.Size = new System.Drawing.Size(543, 450);
+            this.groupBoxThongKeKH.TabIndex = 32;
+            this.groupBoxThongKeKH.TabStop = false;
+            this.groupBoxThongKeKH.Text = "Thống Kê";
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnThongKe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThongKe.BackgroundImage")));
+            this.btnThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKe.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThongKe.Location = new System.Drawing.Point(404, 60);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(102, 23);
+            this.btnThongKe.TabIndex = 6;
+            this.btnThongKe.Text = "Thống Kê";
+            this.btnThongKe.UseVisualStyleBackColor = false;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(289, 59);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(109, 22);
+            this.dateTimePicker2.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(250, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Đến";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(138, 59);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(109, 22);
+            this.dateTimePicker1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Location = new System.Drawing.Point(11, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 19);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Mua hàng từ ngày ";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(462, 13);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 31);
+            this.btnRefresh.TabIndex = 1;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            // 
+            // btnKH
+            // 
+            this.btnKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnKH.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKH.BackgroundImage")));
+            this.btnKH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKH.ForeColor = System.Drawing.Color.Red;
+            this.btnKH.Location = new System.Drawing.Point(11, 16);
+            this.btnKH.Name = "btnKH";
+            this.btnKH.Size = new System.Drawing.Size(199, 37);
+            this.btnKH.TabIndex = 0;
+            this.btnKH.Text = "Top 10 KH Mua Nhiều Nhất";
+            this.btnKH.UseVisualStyleBackColor = false;
+            // 
             // frmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1352, 450);
+            this.Controls.Add(this.groupBoxThongKeKH);
+            this.Controls.Add(this.lblGhichu);
+            this.Controls.Add(this.txtGhichu);
+            this.Controls.Add(this.txtSoDT);
+            this.Controls.Add(this.txtDC);
+            this.Controls.Add(this.lblSoDT);
+            this.Controls.Add(this.lblDiaCHi);
             this.Controls.Add(this.cmbGioiTinh);
             this.Controls.Add(this.lblGioiTinh);
             this.Controls.Add(this.cmbLoaiKH);
@@ -205,6 +380,8 @@
             this.Controls.Add(this.btnThem);
             this.Name = "frmKhachHang";
             this.Text = "frmKhachHang";
+            this.groupBoxThongKeKH.ResumeLayout(false);
+            this.groupBoxThongKeKH.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,7 +392,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.TextBox txttenKH;
         private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.Label lblTenKH;
@@ -224,5 +400,20 @@
         private System.Windows.Forms.Label lblGioiTinh;
         private System.Windows.Forms.ComboBox cmbLoaiKH;
         private System.Windows.Forms.Label lblLoaiKH;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Label lblGhichu;
+        private System.Windows.Forms.TextBox txtGhichu;
+        private System.Windows.Forms.TextBox txtSoDT;
+        private System.Windows.Forms.TextBox txtDC;
+        private System.Windows.Forms.Label lblSoDT;
+        private System.Windows.Forms.Label lblDiaCHi;
+        private System.Windows.Forms.GroupBox groupBoxThongKeKH;
+        private System.Windows.Forms.Button btnThongKe;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnKH;
     }
 }
